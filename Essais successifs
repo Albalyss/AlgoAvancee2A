@@ -1,0 +1,15 @@
+Xi = un ensemble de pièces ( taille non définie )
+==> xi une pièce de cet ensemble
+
+Si (valeurs possibles de xi) = une pièce ci
+
+satisfaisant(xi) = la somme des valeurs des pièces déjà choisies + xi <= la somme voulue
+					la taille de cette liste <= la taille de la liste précédente
+
+enregistrer(xi) = on ajoute xi à la liste des pièces choisies
+
+soltrouvée = la somme des pièces choisies vaut la somme voulue
+
+écriresolution = afficher la liste des pièces choisies
+
+défaire(xi) = on retire xi de la liste des pièces choisies
