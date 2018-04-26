@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class EssaisSuccessifs {
 
-    int rendre = 18;
+    int rendre = 58;
     ArrayList<Integer> solution = new ArrayList<>();
     ArrayList<Integer> test = new ArrayList<>();
 
@@ -47,7 +47,9 @@ public class EssaisSuccessifs {
 
                 else {
                     if(true){                                           //ENCOREPOSSIBLE
-                        solopt(i+1);
+                        if(solution.isEmpty() || i+1 <= solution.size()) {
+                            solopt(i + 1);
+                        }
                     }
                 }
 
