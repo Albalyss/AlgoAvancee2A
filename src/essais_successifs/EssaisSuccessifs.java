@@ -4,12 +4,15 @@ import java.util.ArrayList;
 
 public class EssaisSuccessifs {
 
-    int rendre = 58;
+    int rendre = 8;
     ArrayList<Integer> solution = new ArrayList<>();
     ArrayList<Integer> test = new ArrayList<>();
 
+    int cpt = 0;
+
 
     public void solopt(int i){
+        cpt ++ ;
         int x;
 
         int c [] = {1,2,5,10,20,50,100,200};                            //CALCULER Si
@@ -47,7 +50,7 @@ public class EssaisSuccessifs {
 
                 else {
                     if(true){                                           //ENCOREPOSSIBLE
-                        if(solution.isEmpty() || i+1 <= solution.size()) {
+                        if(solution.isEmpty() || i+1 <= solution.size()) {      //ELAGAGE
                             solopt(i + 1);
                         }
                     }
@@ -66,6 +69,8 @@ public class EssaisSuccessifs {
         for(int i = 0;i<e.solution.size();i++){
             System.out.println(e.solution.get(i));
         }
+
+        System.out.print(e.cpt);
     }
 }
 
