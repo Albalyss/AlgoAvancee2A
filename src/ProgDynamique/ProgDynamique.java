@@ -23,8 +23,8 @@ public class ProgDynamique {
                 tab[i][j] = tab[i-1][j];
 
                 if(c[i] <= j){
-                    if(tab[i][j - c[i]] + 1 < tab[i][j]){
-                        tab[i][j] = tab[i][j-c[i]]+1;
+                    if(tab[i][j - c[i]] + 1 < tab[i][j]){           //On initialise le tableau en mettant le nombre maximum de pièces nécessaires pour un montant, par ex : si on veut rendre 190, on ne peut utiliser au maximum
+                        tab[i][j] = tab[i][j-c[i]]+1;               //qu'au maximum une seule pièce de 100, donc c[6][190] = 1 ( si on met utilise 2 pièces de 100, on obtient 200 > 190 )
                     }
                 }
             }
@@ -34,7 +34,7 @@ public class ProgDynamique {
         int i = n-1;
         int j = rendre;
 
-        while(j!=0){
+        while(j!=0){                                                //On décompose le montant à rendre avec les valeurs optimales inférieures
             if(j >= c[i]){
                 if(tab[i][j-c[i]]+1==tab[i][j]){
                     solution[i]+=1;
@@ -47,7 +47,7 @@ public class ProgDynamique {
             }
         }
 
-        ArrayList<Integer> monnaie = new ArrayList<>();
+        ArrayList<Integer> monnaie = new ArrayList<>();             //La liste solution est composée du nombre de pièces de chaque type que compose la solution optimale, par ex : si on a besoin de 2 pièces de 10 pour la solution, on aura solution[3] = 2 car la pièce 10 correspond à c[3]
 
         for(int k = 0 ; k < n ; k ++){
             for (int l = 0 ; l < solution[k] ; l++){
@@ -56,7 +56,7 @@ public class ProgDynamique {
         }
 
         for(int k = 0 ; k < monnaie.size() ; k++){
-            System.out.println(monnaie.get(k));
+            System.out.println(monnaie.get(k));                     //On affiche la solution finale
         }
     }
 
