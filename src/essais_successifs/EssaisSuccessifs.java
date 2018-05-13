@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class EssaisSuccessifs {
 
-    int rendre = 8;
+    int rendre = 31;
     ArrayList<Integer> solution = new ArrayList<>();
     ArrayList<Integer> test = new ArrayList<>();
 
@@ -69,8 +69,6 @@ public class EssaisSuccessifs {
         for(int i = 0;i<e.solution.size();i++){
             System.out.println(e.solution.get(i));
         }
-
-        System.out.print(e.cpt);
     }
 }
 

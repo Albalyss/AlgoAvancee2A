@@ -63,6 +63,6 @@ public class ProgDynamique {
     public static void main(String[] args){
         ProgDynamique p = new ProgDynamique();
 
-        p.progDynamique(190);
+        p.progDynamique(31);
     }
 }
