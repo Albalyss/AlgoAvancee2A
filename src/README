@@ -1,0 +1,7 @@
+Les 3 packages contiennent les 3 formes des algorithmes à traiter. Pour chacun d'entre eux il suffit de compiler le .java et de l'exécuter :
+
+Pour changer la valeur que l'on souhaite rendre : 
+- Dans l'algo glouton il suffit de modifier la valeur de la variable 'aRendre' à la première ligne de la procédure main
+- Dans l'algo ProgDynamique, il suffit de modifier la valeur en paramètre de l'appel à la procedure progDynamique dans la procédure main ( ligne 66 )
+- Dans l'algo essais successifs, il suffit de modifier la valeur 'rendre' qui est un attribut de la classe EssaisSuccessifs ( ligne 7 ).
+  De plus, dans ce cas, vous pouvez retirer les conditions d'élagage en mettant en commentaires les lignes 53 et 55.
